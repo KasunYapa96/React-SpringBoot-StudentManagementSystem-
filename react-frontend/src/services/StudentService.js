@@ -12,6 +12,11 @@ class StudentService{
     createStudent(student){
         return axios.post(STUDENT_API_BASE_URL,student);
     }
+    
+    deleteStudent(studentId){
+        return axios.delete(STUDENT_API_BASE_URL+ "/" +studentId)
+
+    }
 
 }
 

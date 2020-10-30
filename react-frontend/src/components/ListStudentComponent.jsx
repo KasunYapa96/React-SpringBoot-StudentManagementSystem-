@@ -11,9 +11,15 @@ export default class ListStudentComponent extends Component {
          }
 
             this.addStudent=this.addStudent.bind(this);
+            this.deleteStudent=this.deleteStudent.bind(this);
 
         }
 
+        deleteStudent(id){
+                StudentService.deleteStudent(id).then(res=>{
+                    window.location.reload(false);
+                });
+        }
 
         componentDidMount(){
             StudentService.getStudents().then((res)=>{
@@ -55,6 +61,9 @@ export default class ListStudentComponent extends Component {
                                             <td>{student.fullName}</td>
                                             <td>{student.faculty}</td>
                                             <td>{student.emailId}</td>
+                                            <td>
+                                                <button onClick={()=>this.deleteStudent(student.id)} className="btn btn-danger">Delete</button>
+                                            </td>
 
                                     </tr>
                                 )}
