@@ -4,6 +4,7 @@ import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import ListStudentComponent from './components/ListStudentComponent';
 import HeaderComponent from './components/HeaderComponent';
 import FooterComponent from './components/FooterComponent';
+import CreateStudentComponent from './components/CreateStudentComponent';
 
 
 function App() {
@@ -14,9 +15,10 @@ function App() {
         <HeaderComponent/>
        <div className="container">
           <Switch>
-            <Route path="/" component={ListStudentComponent}></Route>
+            <Route path="/" exact component={ListStudentComponent}></Route>
             <Route path="/students" component={ListStudentComponent}></Route>
-          <ListStudentComponent/> 
+            <Route path="/add-students" component={CreateStudentComponent}></Route>
+        
           </Switch>
             
       </div>

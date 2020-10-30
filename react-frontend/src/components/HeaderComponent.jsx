@@ -6,7 +6,7 @@ export default class FooterComponent extends Component {
             <div>
                 <header >
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                    <div><a href="google.com" className="navbar-brand">Student Management App</a>  </div>
+                    <div className="navbar-brand">Student Management App  </div>
                     </nav>
                 </header>
             </div>

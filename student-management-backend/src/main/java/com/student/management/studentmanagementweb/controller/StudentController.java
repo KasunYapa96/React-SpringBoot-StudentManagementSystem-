@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/")
 public class StudentController {
-
     @Autowired
     private StudentRepository studentRepository;
 
@@ -23,5 +22,16 @@ public class StudentController {
     @PostMapping("/Students")
   public  Student createStudent(@RequestBody Student student){
         return studentRepository.save(student);
+        //When load the (/Students) we are adding the new student object body and post it.
+        // student new object body details are passing to db via studentRepository.save(student)
   }
+
+     @DeleteMapping("/Students/{id}")
+    public void deleteStudent(@PathVariable Long id){
+        studentRepository.deleteById(id);
+
+    }
+
 }
+
+
