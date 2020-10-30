@@ -56,3 +56,9 @@
   text-align: center;
   color: white;
 }
+.navbar {
+  background-color: rgb(50, 50, 56);
+}
+.navbar-brand {
+  color: white;
+}

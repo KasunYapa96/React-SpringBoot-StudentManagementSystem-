@@ -5,7 +5,7 @@ export default class FooterComponent extends Component {
         return (
             <div>
                 <header >
-                    <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                    <nav className="navbar navbar-expand-sm bg-light">
                     <div className="navbar-brand">Student Management App  </div>
                     </nav>
                 </header>
